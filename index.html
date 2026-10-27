@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    /runway-demo/ is replaced by the value of `flutter build --base-href`.
+    It must start and end with a slash.
+  -->
+  <base href="/runway-demo/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="What runs out first when the power goes out, and what to do now.">
+  <!-- Runway is dark only (docs/DESIGN.md §1): canvas #0A0B0D everywhere. -->
+  <meta name="theme-color" content="#0A0B0D">
+  <meta name="color-scheme" content="dark">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Runway">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Runway</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    /* The canvas colour before Flutter's first frame, so there is no white flash. */
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #0A0B0D;
+      color-scheme: dark;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      /* Flutter draws everything itself; its off-screen text-measuring
+         element must never make the page scroll sideways on a phone. */
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body style="background:#0A0B0D">
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
